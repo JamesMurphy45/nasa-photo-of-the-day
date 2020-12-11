@@ -5,6 +5,7 @@ import Title from './Title';
 import Date from './Date';
 import About from './About';
 import "./App.css";
+import styled from "styled-components"
 
 
 const url = "https://api.nasa.gov/planetary"
@@ -40,19 +41,17 @@ function App() {
 
 
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+    <StyledApp className="App">
+      
     <Title title={title}/>
-
     <Photo photo={photo}/>
     <About about={about}/>
-
     <Date date={date}/>
-    </div>
+    </StyledApp>
   );
 }
+const StyledApp = styled.div`
+background-image: url(https://images.unsplash.com/photo-1501862700950-18382cd41497?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1494&q=80)
+`;
 
 export default App;
